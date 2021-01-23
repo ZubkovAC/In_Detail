@@ -2,12 +2,12 @@ import React, {useState} from 'react';
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
 import { Story, Meta } from '@storybook/react/types-6-0';
 import {action} from "@storybook/addon-actions";
-import { Button, ButtonProps } from './Button';
+import { Button, ButtonProps } from '../button/Button';
 import {Accordion, AccordionTypeProps} from "./Accordion";
 
 
 export default {
-    title: 'Test Accordion + Bonus',    //   'newMenu/Test Accordion + Bonus'  - submenu(newMenu)
+    title: 'Test Accordion + Bonus - 14',    //   'newMenu/Test Accordion + Bonus'  - submenu(newMenu)
     component: Accordion,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -47,16 +47,16 @@ MenuCollapsedFALSE.args = {
 
 // story-book -5
 
+let item =[{title:'Hello',value:1},{title:'Hey Hey',value:2},{title:'Xaydi',value:3},{title:'Salut',value:4}]
 
-
-export const AccordionOn = () => <Accordion   menu={'Hello'} value={false} onClick={callback}/>
-export const AccordionOff = () => <Accordion menu={'Users - LOL'} value={true} onClick={callback}/>
+export const AccordionOn = () => <Accordion   menu={'Hello'} value={false} onClick={callback} item={item}/>
+export const AccordionOff = () => <Accordion menu={'Users - LOL'} value={true} onClick={callback} item={item}/>
 /*export const ClickSwitchOn = () => <Accordion value={true} onClick={callback}/>
 export const ClickSwitchOff = () => <Accordion value={false} onClick={callback}/>*/
 
 export const ModeChange = () =>{
     const [value,setvalue]=useState<boolean>(true)
-    return <Accordion menu={'Active - Click'} value={value} onClick={()=>setvalue(!value)}/>
+    return <Accordion menu={'Active - Click'} value={value} onClick={()=>setvalue(!value)} item={item}/>
 
 }
 

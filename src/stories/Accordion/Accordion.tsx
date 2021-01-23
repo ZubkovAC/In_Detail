@@ -1,5 +1,12 @@
 import React from "react";
 
+
+type ItemType={
+    title:string
+    value:any
+}
+
+
 export type AccordionTypeProps = {
     /**
      * @~Name menu TypeProps commment's
@@ -7,6 +14,7 @@ export type AccordionTypeProps = {
     menu: string
     value: boolean
     onClick: () => void
+    item:any[]
 }
 
 export function Accordion(props: AccordionTypeProps) {
@@ -14,7 +22,7 @@ export function Accordion(props: AccordionTypeProps) {
     return (
         <div>
             <AccordionTitle title={props.menu} onClick={props.onClick}/>
-            {!props.value && <AccordionBody/>}
+            {!props.value && <AccordionBody item={props.item} onClick={props.onClick}/>}
 
         </div>
     )
@@ -23,6 +31,7 @@ export function Accordion(props: AccordionTypeProps) {
 export type AccordionTitleTypeProps = {
     title: string
     onClick: () => void
+
 }
 
 export function AccordionTitle(props: AccordionTitleTypeProps) {
@@ -33,15 +42,21 @@ export function AccordionTitle(props: AccordionTitleTypeProps) {
     )
 }
 
+type AccordionBodyPropsType={
+    item:ItemType[]
+    onClick:(value:any)=>void
+}
 
-function AccordionBody() {
+function AccordionBody(props:AccordionBodyPropsType) {
 
     return (
         <div>
             <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
+                {
+                    props.item.map((i,index) =><li onClick={()=>{props.onClick(i.value)}} key={index}>{i.title}</li>)
+                }
+
+
             </ul>
         </div>
     )

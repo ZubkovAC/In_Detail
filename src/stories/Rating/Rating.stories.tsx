@@ -6,7 +6,7 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 import {Rating, RatingTypeProps} from "./Rating";
 
 export default {
-    title: 'Test Rating',
+    title: 'Test Select',
     component: Rating,
     argTypes: {
         backgroundColor: { control: 'color' },
