@@ -25,28 +25,28 @@ const useStyles = makeStyles((theme: Theme) =>
     }),
 );
 
-
 export function SelectTest(props: RatingTypeProps) {
     const classes = useStyles();
     const [age, setAge] = React.useState('');
 
     const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
+        console.log(event)
         setAge(event.target.value as string);
     };
+    const selsectedItem = props.items.find(i => i.value===props.value)
     return (
         <div>
             <FormControl className={classes.formControl}>
-                <InputLabel id="demo-simple-select-label">{props.value}</InputLabel>
+                <InputLabel id="demo-simple-select-label">{selsectedItem}</InputLabel>
                     <Select labelId="demo-simple-select-label"
                             id="demo-simple-select"
                             value={age}
                             onChange={handleChange}>
-                        {props.items.map((i, index) => <MenuItem key={index}>{i.title}</MenuItem>)}
+                        {props.items.map((i, index) => <MenuItem value={i.title} key={index}>{i.title}</MenuItem>)}
                     </Select>
             </FormControl>
         </div>
     )
-
 }
 
 
