@@ -5,8 +5,8 @@ type UnStarTypeProps = {
     setValue: (value: number) => void
     value:number
 }
-type UnContRatingTypeProps = {
-    number: number
+export type UnContRatingTypeProps = {
+    count: number
 }
 
 export function UnContRating(props: UnContRatingTypeProps) {
@@ -15,7 +15,6 @@ export function UnContRating(props: UnContRatingTypeProps) {
     let [on, setOn] = useState(1)
 
     /*
-
         <Star selected={on > 0}/><button onClick={ () => { setOn(1)}}>&#8899;</button>
         <Star selected={on > 1}/><button onClick={ () => { setOn(2)}}>&#8899;</button>
         <Star selected={on > 2}/><button onClick={ () => { setOn(3)}}>&#8899;</button>
@@ -24,7 +23,6 @@ export function UnContRating(props: UnContRatingTypeProps) {
         */
     return (
         <div>
-
             <Star selected={on > 0} setValue={setOn} value={1}/>
             <Star selected={on > 1} setValue={setOn} value={2}/>
             <Star selected={on > 2} setValue={setOn} value={3}/>
@@ -37,7 +35,7 @@ export function UnContRating(props: UnContRatingTypeProps) {
 //const SpanB =<span><b>star</b> &#10026;</span>
 //const Span = <span>star &#10032;</span>
 //const  Star= (props:any) => props.selected ? SpanB : Span
-function Star(props: UnStarTypeProps) {
+export function Star(props: UnStarTypeProps) {
     return <span onClick={() => {
         props.setValue(props.value)}}>
           {props.selected ? <b> &#10026; </b> : <b> &#10032; </b> }
