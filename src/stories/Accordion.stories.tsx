@@ -60,7 +60,6 @@ export const ModeChange = () =>{
 
 }
 
-
 export const ModeChangeStory6:Story<AccordionTypeProps> = (args) =>{
     const [value,setvalue]=useState<boolean>(true)
 
