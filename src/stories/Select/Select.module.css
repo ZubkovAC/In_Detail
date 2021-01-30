@@ -1,0 +1,65 @@
+
+.select.main {
+    border:1px solid black;
+    display: inline-block;
+    min-height: 80px;
+    min-width:100px ;
+}
+.items{
+    position: absolute;
+    padding:5px;
+    border:1px solid black;
+}
+.item.selected {
+    background-color: blue;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.container {
+    border: 2px solid aquamarine;
+    background: linear-gradient(30deg, #16a085, #f4d03f);
+    font-size: 20px;
+    padding: 15px;
+    font-weight: 400;
+    color:yellow;
+    min-height: 80px;
+    min-width:100px ;
+}
+
+.items{
+
+    position: absolute;
+    color:black;
+}
+.border{
+    border: 1px solid red;
+    min-height: 30px;
+    min-width:100px ;
+}
+.item.selected {
+    text-shadow: 1px 1px 2px black, 0 0 1em white;
+    background-color: blue;
+    color:white;
+}
+*/
+
+
+
+/*
+
+.container.active .item{
+    display:block;
+}*/
+

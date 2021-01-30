@@ -17,7 +17,7 @@ export type RatingTypeProps = {
 }
 
 export default {
-    title: 'Detail-14/Test Select',
+    title: 'Detail-15/Test Select',
     component: SelectTest,
     argTypes: {
         backgroundColor: {control: 'color'},
