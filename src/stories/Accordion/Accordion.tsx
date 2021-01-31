@@ -16,8 +16,9 @@ export type AccordionTypeProps = {
     onClick: () => void
     item:any[]
 }
+export const Accordion =React.memo(AccordionSecret)
 
-export function Accordion(props: AccordionTypeProps) {
+export function AccordionSecret(props: AccordionTypeProps) {
 
     return (
         <div>

@@ -12,8 +12,9 @@ export type RatingTypeProps = {
     items: ItemType[]
 }
 
+export const SelectTest2= React.memo(SelectTest2Secret)
 
-export function SelectTest2(props: RatingTypeProps) {
+export function SelectTest2Secret(props: RatingTypeProps) {
 
     const [active,setActive]=useState(false)
     const [hovered,setHovered]=useState(props.value)

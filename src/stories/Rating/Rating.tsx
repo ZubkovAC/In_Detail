@@ -9,7 +9,9 @@ export type RatingTypeProps ={
     onClick:(id:0|1|2|3|4|5)=>void
 }
 
-export function Rating (props:RatingTypeProps) {
+export const Rating = React.memo(RatingSecret)
+
+export function RatingSecret (props:RatingTypeProps) {
 
     return (
         <div>

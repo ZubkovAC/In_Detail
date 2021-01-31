@@ -5,8 +5,9 @@ export type SwitchPropsType= {
 }
 
 
+export let UnContSwitch = React.memo(UnContSwitchSecret)
 
-export function UnContSwitch(props: SwitchPropsType) {
+export function UnContSwitchSecret(props: SwitchPropsType) {
 
     let [on,setOn] = useState(true)
 

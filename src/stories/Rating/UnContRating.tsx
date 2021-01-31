@@ -9,7 +9,9 @@ export type UnContRatingTypeProps = {
     count: number
 }
 
-export function UnContRating(props: UnContRatingTypeProps) {
+export const UnContRating = React.memo(UnContRatingSecret)
+
+export function UnContRatingSecret(props: UnContRatingTypeProps) {
 
 
     let [on, setOn] = useState(1)

@@ -6,8 +6,9 @@ export type SwitchPropsType ={
     onClick:(value:boolean)=>void
 }
 
+export let  Switch = React.memo(SwitchSecret)
 
-export function Switch(props: SwitchPropsType) {
+export function SwitchSecret(props: SwitchPropsType) {
 
 
 
