@@ -1,4 +1,4 @@
-import React, {useReducer, useState} from "react"
+import React, {useState} from "react"
 import {Meta} from "@storybook/react/types-6-0";
 
 export default {
@@ -31,12 +31,15 @@ const Users = React.memo(UsersSecret)
 
 export const Example1 = () => {
     console.log("3-Example1")
+
     const [counter,setcounter]=useState(0)
     const [users,setusers]=useState(["Dimych", "Valera","Artem"])
+
     const addUser = () => {
         let newUser = [...users,'Leluk'+new Date().getDate()]
         setusers(newUser)
     }
+
     return <>
         <button onClick={()=>{setcounter(counter+1)}}>+</button>
         <button onClick={addUser}>add User</button>
