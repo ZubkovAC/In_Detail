@@ -1,4 +1,4 @@
-import React, {useMemo, useState} from "react";
+import React from "react";
 import {Meta} from "@storybook/react/types-6-0";
 
 export default {
@@ -26,7 +26,7 @@ export const Homework17Stories = () => {
         </div>
     }
 
-    const Inputi = ( props:{presIdent: PresidentType[]})  => {
+    /*const Inputi = ( props:{presIdent: PresidentType[]})  => {
         return (
         <div>
             <select >
@@ -37,13 +37,13 @@ export const Homework17Stories = () => {
         </div>
 
         )
-    }
+    }*/
 
 
 
     const Users  = React.memo(PresidentContainer)
 
-    const countryUSA =()=>{
+/*    const countryUSA =()=>{
         let dotCountru = presIdent.filter(c=>c.country!=='USA')
         setPresident([...dotCountru])
     }
@@ -54,7 +54,7 @@ export const Homework17Stories = () => {
     const countryUK =()=>{
         let dotCountru = presIdent.filter(c=>c.country!=='UK')
         setPresident([...dotCountru])
-    }
+    }*/
 
     const president = [
         {id:1,name:'George Washington', country:'USA',countryPeople:321413446},
@@ -69,16 +69,17 @@ export const Homework17Stories = () => {
     ]
 
     //const [counter, setcounter] = useState(0)
-    const [presIdent, setPresident] = useState<PresidentType[]>(president)
+    //const [presIdent, setPresident] = useState<PresidentType[]>(president)
 
 
 
 
     return <>
-        <Users presIdent={presIdent}/>
+
+        <Users presIdent={president}/>
         <select >
             {
-                presIdent.map( c =>
+                president.map( c =>
 
                      <option key={c.id}  >{c.country}</option>)
             }

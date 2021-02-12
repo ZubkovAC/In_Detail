@@ -1,4 +1,4 @@
-import React, {useReducer, useState} from "react";
+import React, {useReducer} from "react";
 import {reducer} from "./reduser";
 
 export  type UnContAccordionTypeProps = {
@@ -14,7 +14,7 @@ export const UnContAccordion =React.memo(UnContAccordionSecret)
 
 export function UnContAccordionSecret(props: UnContAccordionTypeProps) {
 
-    let [on, setOn] = useState(true)
+    /*let [on, setOn] = useState(true)*/
     let [state, dispatch] = useReducer(reducer,{collapsed:false})
 
     return (

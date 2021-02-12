@@ -1,7 +1,6 @@
 import React, {ChangeEvent, useRef, useState} from 'react';
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
 import { Story, Meta } from '@storybook/react/types-6-0';
-import {action} from "@storybook/addon-actions";
 
 type UncontrolledInputPropsType = {
     input:string
@@ -40,7 +39,7 @@ const Template3:Story<UncontrolledInputPropsType> = (args) => {
     return <><input ref={inputRef} id={'inputId'}/> <button onClick={save}>save</button> actual value - {value}</>;
 }
 
-const Template4:Story<UncontrolledInputPropsType> = (args) => {
+/*const Template4:Story<UncontrolledInputPropsType> = (args) => {
     const [value,setValue]=useState()
     const inputRef = useRef<HTMLInputElement>(null)
     const save = ()=>{
@@ -48,7 +47,7 @@ const Template4:Story<UncontrolledInputPropsType> = (args) => {
         setValue(el.value)}
 
     return <><input ref={inputRef} id={'inputId'}/> <button onClick={save}>save</button> actual value - {value}</>;
-}
+}*/
 
 const Template5:Story<UncontrolledInputPropsType> = (args) => {
     const [parentValue,setParentValue]=useState('')
