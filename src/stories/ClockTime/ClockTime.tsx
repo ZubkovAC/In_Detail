@@ -15,10 +15,10 @@ export const ClockTime = (props: PropsType) => {
     useEffect(() => {
         let time = setInterval(() => {
             setDate(new Date())
-            console.log('id id')
+            console.log('Tick')
         }, 1000)
         return () => {
-            console.log('id-iddd')
+            console.log('Tuck')
             clearInterval(time)
         }
     }, [])
